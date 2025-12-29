@@ -1,0 +1,19 @@
+# Environments
+.venv/
+env/
+.env
+.adk/
+
+# Python
+__pycache__/
+*.py[cod]
+audit-key.pem
+
+# React / Node
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Media
+*.mp4

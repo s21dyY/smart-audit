@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Secrets
+/app/.env
+audit-key.pem
+
+# Mac
+.DS_Store
+
+# React/Node
+node_modules/
+dist/
