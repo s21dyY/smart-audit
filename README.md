@@ -1,16 +1,16 @@
-# React + Vite
+# Smart Audit AI 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intelligent audit rule generator built with **FastAPI**, **React**, and **Google Gemini**.
 
-Currently, two official plugins are available:
+## 🏗️ Architecture
+- **Frontend:** React hosted on AWS S3 / CloudFront.
+- **Backend:** Containerized FastAPI on AWS EC2.
+- **Infrastructure:** Docker (Multi-arch buildx), Amazon ECR, AWS VPC.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Key Technical Challenges Solved
+- **Cross-Platform Deployment:** Utilized Docker Buildx to bridge ARM64 (Mac) development with AMD64 (Linux) production environments.
+- **Cloud Orchestration:** Configured AWS Security Groups and Host Networking for seamless API ingress.
+- **AI Integration:** Implemented structured Pydantic schemas for reliable LLM outputs.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Deployment
+The backend is deployed via Docker to an EC2 instance, with images managed through Amazon ECR. The frontend is delivered via an S3 static website endpoint.
